@@ -118,12 +118,10 @@ top: 9%;
   position: relative;
     width: 100%; 
     max-width: 1200px;
+  transform: translateY(50px);
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(0.4); 
-    transform-origin: center top; 
-    margin-top: -200px; 
 }
 
 .basket-bg {
