@@ -150,7 +150,6 @@ top: 9%;
     display: block;
    transition: transform 0.2s ease-in-out;
     pointer-events: auto;
-    width: 40%;
 }
 
 .interactive-item img {
