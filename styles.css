@@ -108,12 +108,10 @@ position: absolute;
 }
 
 .earbud-bg {
-position: absolute;
-    top: -32%;
-    right: 80%; 
-    width: 120%;
-    opacity: 0.5;
-    pointer-events: none;
+top: 9%; 
+    left: -10%; 
+    width: 50% !important;
+    z-index: 6;
 }
 
 .composition-container {
@@ -168,10 +166,11 @@ position: absolute;
 }
 
 .turtle {
-   top: 10%; 
-    left: 20%; 
-    width: 100%;
-    z-index: 7;
+top: 8%; 
+    left: 30%; 
+    width: 35% !important; /* Shrunk from 100% */
+    transform: rotate(-60deg);
+    z-index: 4;
 }
 
 .bread {
@@ -183,9 +182,9 @@ position: absolute;
 }
 
 .clipboard {
-   top: -5%; 
-    right: -30%; 
-    width: 130%; 
+ top: -5%; 
+    right: -15%; 
+    width: 60% !important; /* Shrunk from 130% */
     z-index: 1;
 }
 
