@@ -115,13 +115,15 @@ top: 9%;
 }
 
 .composition-container {
-   position: relative;
-    width: 90vw; 
-    max-width: 600px;
-    margin: 0 auto
+  position: relative;
+    width: 100%; 
+    max-width: 1200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(0.4); 
+    transform-origin: center top; 
+    margin-top: -200px; 
 }
 
 .basket-bg {
@@ -150,6 +152,7 @@ top: 9%;
     display: block;
    transition: transform 0.2s ease-in-out;
     pointer-events: auto;
+    width: 40%;
 }
 
 .interactive-item img {
