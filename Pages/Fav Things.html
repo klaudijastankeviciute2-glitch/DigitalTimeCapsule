@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>2026 Digital Time Capsule | My Favorite Things</title>
+    <meta name="description" content="The products that defined 2026 for me thus far. Ranging from animals to my favorite pair of shoes.">
+    <meta name="keywords" content="Time Capsule, 2026 Favorites, Personal collection, Interactive Design, Personal Portfolio">
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <a href="../index.html" class="home-logo">
+    <img src="../Images/Music/Home.png" alt="Back to Home">
+</a>
+
+
+<div class="composition-container">
+ <img src="../Images/FavoriteThings/metal baby .png" class="metalbaby-bg" alt="">
+ <img src="../Images/FavoriteThings/venusflytrap.png" class="venus-bg" alt="">
+<img src="../Images/FavoriteThings/venusflytrap.png" class="venus2-bg" alt="">
+<img src="../Images/FavoriteThings/stick.png" class="stick-bg" alt="">
+<img src="../Images/FavoriteThings/stick.png" class="stick2-bg" alt="">
+
+<div class="butterfly-container">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-1" onclick="openModal('frog.png', 'Frogs', 'There are so many different types of frogs out there. Apparently, the only place you cant find frogs is Antarctica… but Im starting to think thats a lie. Where are the frogs in Ireland?')">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-2" onclick="openModal('shoe.png', 'Shoes', 'I have 2 staple shoes that go with anything, and I will wear them until I have holes in them. Some brands I recommend: Converse, Puma, and Dr. Martens.')">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-3" onclick="openModal('top.png','Tops', 'My favorite clothing article. Theres always a staple bottom, but never a staple top in my mind. To recommend a few shops: Brandy Melville, Zara, local thrift stores, and Urban Outfitters.')">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-4" onclick="openModal('Spirited Away.png','Studio Ghibli', 'one of my favorite production studios to exist. My top recommendations are Spirited Away, Howls Moving Castle, and The Cat Returns.')">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-5" onclick="openModal('cat.png', 'Cats.', 'Ive owned a few over the years, but sphynx cats are my top 3. Be aware that these cats are expensive and are prone to health issues.')">
+        <img src="../Images/FavoriteThings/butterflymetal.gif" class="butterfly-gif pos-6" onclick="openModal('beet.png','Lithuanian Food', 'Do you like starchy, protein-heavy, pickly, and comforting food? Try Lithuanian cuisine. Among the most popular dishes, my favorites you should try are cepelinai, šaltibarščiai, and balandėliai!' )">
+    </div>
+
+<div id="infoModal" class="modal-overlay">
+    <div class="modal-content layered-modal">
+        <button onclick="closeModal()" class="close-btn">X</button>
+        
+        <img src="" class="nested-image" id="nestedImage">
+        <img src="../Images/FavoriteThings/star.png" class="modal-bg-image">
+
+        <div class="side-text-container">
+            <h2 id="modalTitle">Title Here</h2>
+            <p id="modalDescription">Description goes here...</p>
+            </div>
+    </div>
+</div>
+
+
+
+<script src="../script.js"></script>
+
+</body>
+</html>

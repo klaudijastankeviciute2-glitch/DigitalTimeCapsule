@@ -1,0 +1,681 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff; 
+    overflow-x: hidden; overflow-Y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HOMEPAGE */
+.home-logo,.side-logo {
+    position: fixed;
+    left: 40px;
+    top: 19%;
+    transform: translateY(-50%);
+    width: clamp(300px, 40vw, 500px);
+    cursor: pointer;
+    z-index: 100; 
+    animation: bobbing 1s ease-in-out infinite;
+}
+
+.home-logo img, .side-logo img {
+    width: 100%;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.home-logo:hover img, .side-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes bobbing {
+    0%, 100% { transform: translateY(-50%); }
+    50% { transform: translateY(-70%); } 
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    padding: clamp(20px, 5vw, 60px);
+    border-radius: 10px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    font-size: 24px;
+    padding: 30px 20px;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 100px;
+}
+
+.modal-content h2 {
+   font-size: clamp(1.5rem, 5vw, 3rem);
+    color: #333;
+}
+
+.modal-content p, .modal-content li {
+   font-size: 50px; 
+    line-height: 1.6;
+    color: #555;
+}
+
+.star-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130%; 
+    z-index: 0; 
+    opacity: 0.2;
+    pointer-events: none; 
+}
+
+.tapeticket-bg {
+position: absolute;
+    bottom: -40%;
+    left: 80%;
+    width: 130%;
+    z-index: 12;
+   opacity: 0.5;
+    pointer-events: none;
+}
+
+.earbud-bg {
+position: absolute;
+    top: -32%;
+    right: 80%; 
+    width: 120%;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.composition-container {
+   position: relative;
+    width: 100%; 
+    max-width: 1200px;
+  transform: translateY(50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basket-bg {
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+.back { 
+    z-index: 1; 
+    position: relative; 
+}
+
+.front { 
+    z-index: 10; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    pointer-events: none;
+    clip-path: none;
+}
+
+.interactive-item {
+    position: absolute;
+    display: block;
+   transition: transform 0.2s ease-in-out;
+    pointer-events: auto;
+}
+
+.interactive-item img {
+    width: 100%;
+    height: auto;
+    display:block;
+}
+
+.earphones {
+   top: 9%; 
+    left: -15%; 
+    width: 100%; 
+    z-index: 6;
+}
+
+.turtle {
+   top: 10%; 
+    left: 20%; 
+    width: 100%;
+    z-index: 7;
+}
+
+.bread {
+   top: 8%; 
+    left: 30%; 
+    width: 100%; 
+    transform: rotate(-60deg);
+    z-index: 4;
+}
+
+.clipboard {
+   top: -5%; 
+    right: -30%; 
+    width: 130%; 
+    z-index: 1;
+}
+
+@keyframes jiggle {
+   0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(5deg) scale(1.15); }
+    100% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes jiggle-bread {
+   0% { transform: rotate(-60deg) scale(1); }
+   50% { transform: rotate(-55deg) scale(1.1); } 
+   100% { transform: rotate(-60deg) scale(1); }
+}
+
+.bread:hover {
+    animation: jiggle-bread 0.4s ease-in-out infinite;
+    z-index: 9;
+}
+
+.interactive-item:not(.bread):hover {
+    animation: jiggle 0.4s ease-in-out infinite;
+    z-index: 9; 
+}
+
+/* Music  */
+
+.ipodbg-bg {
+position: absolute; 
+  top: 10%;
+  right: 120%;
+  width: 150%;
+  transform: rotate(-40deg);
+  opacity: 0.7;
+}
+
+.pod-bg {
+position: relative;
+    width: 900%; 
+    max-width: 1000px;
+    z-index: 5; 
+}
+
+.buds-bg {
+position: absolute;
+top: 60%;
+left: 80%;
+width: 120%;
+transform: translateY(-70%) rotate(230deg);
+}
+
+.butterfly-bg {
+position: absolute; 
+top: 50%;
+right: 80%;
+width: 50%; 
+transform: translateY(-70%) rotate(20deg);
+opacity: 0.3;
+z-index: -25;
+}
+
+.butterfly2-bg {
+position: absolute; 
+top: 50%;
+left: 90%;
+width: 40%;
+transform: rotate(-40deg);
+opacity: 0.3;
+z-index: -25;
+}
+
+.butterfly3-bg {
+position: absolute; 
+top: 50%;
+left: 130%;
+width: 70%;
+transform: translateY(-100%) rotate(20deg);
+opacity: 0.3;
+z-index: -25;
+}
+
+.butterfly4-bg {
+position: absolute; 
+top: 50%;
+right: 130%;
+width: 30%;
+transform: translateY(70%) rotate(-32deg);
+opacity: 0.3;
+z-index: -25;
+}
+
+.microphones-bg {
+position: absolute;
+top: 10%;
+left: 110%;
+width: 120%;
+transform: translateY(-10%) rotate(40deg);
+opacity: 0.7;
+pointer-events: none;
+}
+
+.player-screen {
+    position: absolute;
+    z-index: 20;
+    width: 42% ; 
+    top: 60%;    
+    left: 50%;
+    transform: translate(-45%, -100%);
+    display: flex;
+    flex-direction: column;
+aspect-ratio: 1 / 1;
+}
+
+.controls {
+   display: flex; 
+    justify-content: center;
+    width: 100%;                 
+    max-width: 500px;             
+    margin: 20px auto 0;         
+    gap: 200px;
+    transform: translateY(110px)
+}
+
+.controls button {
+    flex: none;
+    width: 80px;
+    height: 50px;
+   margin-top: 20px; 
+   cursor: pointer;
+}
+
+/* Favorite food */
+
+#api-recipe-box {
+    position: fixed;
+    bottom: 2%;
+    right: 90%;
+    background: rgba(174, 167, 167, 0.9); 
+    padding: 30px;
+    max-width: 250px
+}
+
+.metalplate-bg {
+position: absolute; 
+top: 5%;
+right: 35%; 
+width: 130%;
+z-index: -1;
+transform: translateY(-55%);
+}
+
+.spoon-bg {
+position: absolute; 
+top: 50%;
+left: 65%;
+width: 120%;
+transform: translateY(-50%);
+}
+
+.flower-bg {
+position: absolute; 
+top: 40%;
+right: 100%;
+opacity: 0.2;
+z-index: -2;
+transform: translateY(-5%);
+}
+
+.flower2-bg {
+position: absolute;
+top: 20%;
+left: 100%;
+opacity: 0.2;
+z-index: -2;
+transform: translateY(-50%);
+}
+
+.goatcheese {
+position: absolute;
+bottom: 5%;
+right: 100%; 
+width: 30%;
+transform: translateY(100%) rotate(15deg);
+z-index: 2;
+}
+
+.pickles {
+position: absolute;
+top: 5%;
+right: 50%; 
+width: 35%;
+transform: translateY(10%) rotate(15deg);
+z-index: 2; 
+}
+
+.hummus {
+position: absolute;
+top: 40%;
+right: 80%; 
+width: 30%;
+transform: translateY(-150%) rotate(10deg);
+z-index: 1; 
+}
+
+.kimchi {
+position: absolute;
+top: 60%;
+right: 45%;
+width: 35%;
+transform: translateY(-119%)
+}
+
+.cheese {
+position: absolute;
+top: 60%;
+right: 65%;
+width: 35%;
+transform: translateY(-10%) rotate(-10deg)
+}
+
+.fish {
+position: absolute;
+top: 10%;
+right: 105%; 
+width: 50%;
+transform: rotate(-30deg)
+}
+
+.sprout {
+position: absolute;
+top: 50%;
+right: 115%;
+width: 35%;
+transform: translateY(-130%);
+}
+
+.gray-food {
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.4s ease, opacity 0.4s ease, transform 0.3s ease;
+}
+
+.gray-food:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.spoon-instructions {
+    position: absolute;
+    top: 55%; 
+    left: 74%;
+    transform: translate(-50%, -50%) rotate(-5deg);
+    text-align: center;
+}
+
+.spoon-instructions h2 {
+    font-family: 'Georgia', serif; 
+    color: #000000;
+    font-size: 5.1rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.spoon-instructions p {
+    font-style: italic;
+    font-size: 4.6rem;;
+    color: #888383;
+}
+
+/* FAV THINGS PAGE */
+.metalbaby-bg {
+position: absolute;
+top: 20%;
+left: 2%;
+width: 100%;
+transform: translateY(-20%);
+}
+
+.venus-bg {
+position: absolute; 
+top: 40%;
+left: 60%;
+width:100%;
+transform: translateY(-40%) rotate(90deg);
+opacity: 0.3;
+z-index: -6;
+}
+
+.venus2-bg {
+position: absolute; 
+top: 40%;
+right: 60%;
+width:100%;
+transform: translateY(-40%) rotate(90deg) scaleY(-1);
+opacity: 0.3;
+z-index: -6;
+}
+
+.stick-bg {
+position: absolute; 
+top: 40%;
+left: 100%;
+width:100%;
+transform: translateY(-40%) rotate(90deg)
+}
+
+.stick2-bg {
+position: absolute; 
+top: 40%;
+right: 100%;
+width:100%;
+transform: translateY(-40%) rotate(90deg) scaleY(-1);
+}
+
+
+.butterfly-gif {
+    position: fixed;
+    cursor: pointer;
+    transition: transform 0.5s ease, filter 0.5s ease;
+    width: 20%; 
+    z-index: 10%;
+}
+
+.clickable-gif:hover {
+    transform: scale(1.05); 
+    filter: brightness(1.1); 
+}
+
+
+.modal-content.layered-modal {
+    position: relative;
+    background: none;
+    width: 800px; 
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible; 
+}
+
+
+.modal-bg-image {
+    position: absolute;
+    top: -20%;
+    width: 120%; 
+    height: auto;
+    z-index: 4; 
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.nested-image {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 45%; 
+    z-index: 5; 
+}
+
+.side-text-container {
+    position: absolute;
+    bottom: 10%; 
+    width: 60%;
+    text-align: center;
+    z-index: 10;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    cursor: pointer;
+}
+#modalTitle {
+    font-family: 'Courier New', Courier, monospace; 
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 4.5rem;   
+    letter-spacing: 3px; 
+    color: #ffffff;
+}
+
+#modalDescription {
+    font-family: 'Lucida Console', monospace;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #ffffff;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pos-1 { top: 10%; left: 10%; }   
+.pos-2 { top: 10%; right: 10%; } 
+.pos-3 { bottom: 15%; left: 5%; } 
+.pos-4 { bottom: 15%; right: 5%; }
+.pos-5 { top: 50%; left: -5%; transform: translateY(-50%); } 
+.pos-6 { top: 50%; right: -5%; transform: translateY(-50%); }
+
+/* Contact me */
+.contact-section {
+    font-family: 'Lucida Console', monospace;
+    font-size: 1.8rem;
+    background: rgba(179, 172, 172, 0.8); 
+    width: 20%;
+    border: 1px solid #000;
+    padding: 30px;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 768px) {
+    body { 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+    .home-logo, .side-logo {
+        left: 20px;
+        top: 10%;
+        width: 120px; 
+    }
+
+    .composition-container {
+        width: 95%;
+        transform: translateY(20px);
+    }
+
+    .earphones, .turtle, .bread, .clipboard {
+        width: 80% !important;
+        left: 10% !important;
+        right: auto !important;
+    }
+
+    .modal-content, .modal-content.layered-modal {
+        width: 95vw !important;
+        height: auto !important;
+        min-height: 400px;
+        padding: 20px !important;
+    }
+
+    #modalTitle { font-size: 1.8rem !important; }
+    #modalDescription { font-size: 1rem !important; }
+    .modal-content p { font-size: 1.2rem !important; }
+
+    .pod-bg {
+        width: 100% !important; 
+        max-width: 320px;
+    }
+
+    .player-screen {
+        width: 70% !important;
+        top: 48% !important;
+        left: 50% !important;
+        transform: translate(-50%, -100%) !important;
+    }
+
+    .controls {
+        gap: 20px !important; 
+        transform: translateY(20px) !important;
+    }
+
+    .controls button {
+        width: 60px;
+        height: 40px;
+        font-size: 0.7rem;
+    }
+
+    .spoon-instructions h2 { font-size: 1.8rem !important; }
+    .spoon-instructions p { font-size: 1.2rem !important; }
+    
+    .metalplate-bg { width: 180% !important; right: -40% !important; }
+
+    
+    .contact-section {
+        width: 90% !important; 
+        margin: 20px auto;
+        font-size: 1rem !important;
+    }
+
+    .tapeticket-bg, .earbud-bg, .microphones-bg, .venus-bg, .venus2-bg {
+        display: none !important;
+    }
+    
+    .modal-bg-image {
+        width: 150% !important;
+        top: 0 !important;
+    }
+}

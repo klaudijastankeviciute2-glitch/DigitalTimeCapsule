@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Message for 2026 | Digital Time Capsule</title>
+    <meta name="description" content="An interactive 2026 digital time capsule featuring my favorite music, products, and foods. Explore the collection through a unique visual interface.">
+    <meta name="keywords" content="Time Capsule, 2026 Favorites, Interactive Design, Personal Portfolio">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="side-logo" onclick="toggleModal()">
+    <img src="Images/Homepage/Moth.png" alt="Menu Logo">
+</div>
+
+<div id="helpModal" class="modal-overlay" onclick="toggleModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <h2> Welcome To My Digital Time Capsule!</h2>
+        <p>I wanted to make an online capsule filld with my favorite things in 2026. If you are interested in finding out if we share the same favorites or would like to find out some new products, music, or foods, please make yourself at home! </p>
+        <ul style="font-size: 30px; color: #bcbcbc; list-style-type: square; padding-left: 20px;">
+           <li style="font-size: 30px;">Strating from the bags bottom left, hover over the product you like first</li>
+            <li style="font-size: 30px;">Click it and you'll be transferred to another page</li>
+        </ul>
+
+        
+<form id="capsule-form" class="complex-form">
+    <h3> Send a message! </h3>
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            
+            <select id="category" required>
+                <option value="">What's your favorite category?</option>
+                <option value="music">Music</option>
+                <option value="food">Food</option>
+                <option value="tech">Tech</option>
+            </select>
+            
+            <textarea id="message" placeholder="Leave a message for your future self..." required></textarea>
+            
+            <button type="submit" id="submit-btn">Seal the Capsule</button>
+        </form>
+        <div id="form-status"></div>
+        <button onclick="toggleModal()">Close</button>
+    </div>
+</div>
+<div class="composition-container">
+<img src="Images/Homepage/star.png" class="star-bg" alt="">
+
+<img src="Images/Homepage/Duck tape and tickets .png" class="tapeticket-bg" alt="">
+
+<img src="Images/Homepage/Earbud loop.png" class="earbud-bg" alt="">
+
+<img src="Images/Homepage/Metal bag size 2 .png" alt="Metal Bag" class="basket-bg back">
+
+<a href="Pages/Fav Music.html" class="interactive-item earphones">
+<img src="Images/Homepage/Metal Headphones.png" alt="Go to music">
+</a>
+
+<a href="Pages/Fav Things.html" class="interactive-item turtle">
+<img src="Images/Homepage/Jelly Cat Metal Turtle .png" alt="Go to things">
+</a>
+
+<a href="Pages/Fav Food.html" class="interactive-item bread">
+<img src="Images/Homepage/Metal Bread .png" alt="Go to food">
+</a>
+
+<a href="Pages/by-me.html" class="interactive-item clipboard">
+<img src="Images/Homepage/Metal Clipboard.png" alt="Go to aboutme">
+</a>
+<img src="Images/Homepage/Metal bag size 2 .png" alt="" class="basket-bg front">
+    </div>
+
+           
+<script src="script.js"></script>
+</body>
+</html>
